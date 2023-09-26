@@ -26,4 +26,12 @@ public class player_move : MonoBehaviour
             rb.AddForce(new Vector3(inputX, 0, inputY) * speed);
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.transform.tag=="trap")
+        {
+            StartCoroutine(player_st.player_St.Damage(other.GetComponent<trap_st>().trap_damage));
+        }
+    }
+
 }

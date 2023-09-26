@@ -12,38 +12,27 @@ public class player_st : MonoBehaviour
     [SerializeField]
     private int key_item_Count = 0;
 
-    private static player_st player_St = null;
+    public static player_st player_St = null;
 
     void Awake()
     {
-        if (null == player_St)
+        if (player_St==null)
         {
             player_St = this;
             DontDestroyOnLoad(this.gameObject);
         }
         else
         {
-            Destroy(this.gameObject);
+            if(player_St!=this)
+                Destroy(this.gameObject);
         }
     }
 
-    public static player_st Player_St
+    public IEnumerator Damage(int damage_index)
     {
-        get
-        {
-            if (null == Player_St)
-            {
-                return null;
-            }
-            return Player_St;
-        }
-    }
-
-
-    IEnumerator Damage(int damage,float wait_time)
-    {
-        yield return new WaitForSeconds(wait_time);
-        hp -= damage;
+        yield return 0;
+        hp -= damage_index;
+        Debug.Log(hp);
     }
     public void GameOver()
     {
@@ -56,5 +45,9 @@ public class player_st : MonoBehaviour
     public void Runnig()
     {
         stamina -= 1;
+    }
+    public void Helaing()
+    {
+        hp += 1;
     }
 }
