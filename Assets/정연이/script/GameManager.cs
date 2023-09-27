@@ -47,7 +47,6 @@ public class GameManager : MonoBehaviour
         {
             if(min == 0)
             {
-                Timer_text.text = "TIME OUT!";
                 GameOver();
             }
             else
@@ -56,7 +55,6 @@ public class GameManager : MonoBehaviour
                 sec = 59;
             }
         }
-
         sec -= Time.deltaTime;
         Timer_text.text = string.Format("{0:D1}:{1:D2}", min, (int)sec);
 
