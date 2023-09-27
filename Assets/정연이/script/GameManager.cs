@@ -60,11 +60,13 @@ public class GameManager : MonoBehaviour
 
         key_count_text.text = key_item_count + " / 5";
 
+        itemchker();
 
     }
 
     public void GameOver()
     {
+
         gameover_screen.SetActive(true);
     }
     public void Key_Item_Acquisition()
@@ -91,6 +93,11 @@ public class GameManager : MonoBehaviour
             case 4:
                 {
                     //±ÕΩ≈,º’ µÓ¿Â
+                }
+                break;
+            case 5:
+                {
+                    GameClear();
                 }
                 break;
         }
