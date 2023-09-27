@@ -46,7 +46,10 @@ public class GameManager : MonoBehaviour
         if(sec <= 0)
         {
             if(min == 0)
+            {
+                Timer_text.text = "TIME OUT!";
                 GameOver();
+            }
             else
             {
                 min -= 1;
@@ -73,5 +76,25 @@ public class GameManager : MonoBehaviour
     void GameClear()
     {
         gameclear_screen.SetActive(true);
+    }
+    void itemchker()
+    {
+        switch (key_item_count)
+        {
+            case 1:
+                {
+                    //±Í½Å ±ôºý
+                }break;
+            case 2:
+                {
+                    //¼Õ µîÀå
+                }
+                break;
+            case 4:
+                {
+                    //±Í½Å,¼Õ µîÀå
+                }
+                break;
+        }
     }
 }
