@@ -22,7 +22,7 @@ public class obj_Interaction : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     if(hit.transform.GetComponent<item_st>().this_KeyItem)
-                        GameManager.GM.Key_Item_Acquisition();
+                        player_st.player_St.Key_Item_Acquisition();
                     else
                     {
                         switch(hit.transform.GetComponent<item_st>().item_index)

@@ -7,6 +7,10 @@ public class player_st : MonoBehaviour
 {
     [SerializeField]
     private int hp=3;
+    [SerializeField]
+    private int stamina = 100;
+    [SerializeField]
+    private int key_item_Count = 0;
 
     public static player_st player_St = null;
 
@@ -29,6 +33,18 @@ public class player_st : MonoBehaviour
         yield return 0;
         hp -= damage_index;
         Debug.Log(hp);
+    }
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
+    public void Key_Item_Acquisition()
+    {
+        key_item_Count += 1;
+    }
+    public void Runnig()
+    {
+        stamina -= 1;
     }
     public void Helaing()
     {
