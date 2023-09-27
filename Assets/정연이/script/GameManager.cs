@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+
         gameover_screen.SetActive(true);
     }
     public void Key_Item_Acquisition()
