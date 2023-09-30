@@ -5,21 +5,45 @@ using UnityEngine;
 public class item_spwner : MonoBehaviour
 {
     [SerializeField]
-    private int max_item = 0;
+    private GameObject[] spwn_obj;
     [SerializeField]
-    private Collider[] spwn_zoen;
-    [SerializeField]
-    private GameObject key_item;
+    private int spwn_item_index = 5;
+
+    int[] trash_count;
+    int randomindex = 0;
 
     private void Start()
     {
-        for(int i=0;i<=max_item-1;i++)
-        {
-           float rangeX=Random.Range((spwn_zoen[i].bounds.size.x/2 )* -1, spwn_zoen[i].bounds.size.x/2);//약간 이상한 곳에 스폰됨
-           float rangeZ = Random.Range((spwn_zoen[i].bounds.size.z/2)* -1, spwn_zoen[i].bounds.size.z/2);//약간 이상한 곳에 스폰됨
+        trash_count = new int[spwn_obj.Length];
 
-            key_item =Instantiate(key_item,key_item.transform.position=new Vector3(rangeX, 0, rangeZ), Quaternion.identity);
+        int spwn_count = 0;
+        bool retry = false;
+
+        for (int i = 0; i <= 100; i++)
+        {
+            if (spwn_count == spwn_item_index)
+                break;
+
+            randomindex = Random.Range(1, 10);
+            Debug.Log(randomindex);
+            for (int L = 0; L <= trash_count.Length - 1; L++)
+            {
+                Debug.Log("검사");
+                if (trash_count[L] == randomindex)
+                {
+                    Debug.Log("같은 수");
+                    retry = true;
+                    break;
+                }
+            }
+            if (retry)
+            {
+                retry = false;
+                continue;
+            }
+            trash_count[spwn_count] = randomindex;
+            spwn_count++;
+            spwn_obj[randomindex].SetActive(true);
         }
-         
     }
 }
