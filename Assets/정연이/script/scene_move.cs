@@ -10,7 +10,7 @@ public class scene_move : MonoBehaviour
     [SerializeField]
     private string load_name;
 
-    void OnClick()
+    public void OnClick()
     {
         if(this_click)
         {
