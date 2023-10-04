@@ -5,6 +5,8 @@ using UnityEngine;
 public class obj_move : MonoBehaviour
 {
     [SerializeField]
+    private GameObject move_obj;
+    [SerializeField]
     private float[] target_xyz=new float [3];
     [SerializeField]
     private float move_speed;
@@ -14,8 +16,8 @@ public class obj_move : MonoBehaviour
     {
         Vector3 target_vetcor = new Vector3(target_xyz[0], target_xyz[1], target_xyz[2]);
         if (is_MoveTowards)
-            transform.position = Vector3.MoveTowards(transform.position, target_vetcor, move_speed);
+            move_obj.transform.position = Vector3.MoveTowards(move_obj.transform.position, target_vetcor, move_speed);
         else
-            transform.position = target_vetcor;
+            move_obj.transform.position = target_vetcor;
     }
 }

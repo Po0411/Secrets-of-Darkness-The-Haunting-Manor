@@ -25,13 +25,10 @@ public class item_spwner : MonoBehaviour
                 break;
 
             randomindex = Random.Range(1, 10);
-            Debug.Log(randomindex);
             for (int L = 0; L <= trash_count.Length - 1; L++)
             {
-                Debug.Log("검사");
                 if (trash_count[L] == randomindex)
                 {
-                    Debug.Log("같은 수");
                     retry = true;
                     break;
                 }

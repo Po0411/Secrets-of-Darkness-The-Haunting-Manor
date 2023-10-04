@@ -34,6 +34,7 @@ public class MoveAndDestroyObjectOnTrigger : MonoBehaviour
             // 이동이 완료된 후 일정 시간 뒤에 물체를 파괴합니다.
             yield return new WaitForSeconds(destroyDelay);
             Destroy(objectToMove.gameObject);
+            
         }
     }
 }
