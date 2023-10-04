@@ -10,6 +10,9 @@ public class MoveAndDestroyObjectOnTrigger : MonoBehaviour
     private bool isPlayerInside = false; // 플레이어가 트리거 안에 있는지 여부
 
 
+    int a = 0;
+
+
     AudioSource audioSource;
 
     private void Start()
@@ -26,7 +29,11 @@ public class MoveAndDestroyObjectOnTrigger : MonoBehaviour
             isPlayerInside = true;
             StartCoroutine(MoveAndDestroy());
 
-            PlayAudio();
+            if(a == 0)
+            {
+                PlayAudio();
+                a++;
+            }
         }
     }
 
