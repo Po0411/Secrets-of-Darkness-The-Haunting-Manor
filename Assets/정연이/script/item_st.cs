@@ -5,5 +5,4 @@ using UnityEngine;
 public class item_st : MonoBehaviour
 {
     public bool this_KeyItem = false;
-    public int item_index = 0;
 }

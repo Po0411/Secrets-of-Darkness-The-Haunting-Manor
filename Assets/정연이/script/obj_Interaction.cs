@@ -10,13 +10,6 @@ public class obj_Interaction : MonoBehaviour
     public GameObject interract_text;
     Animator animator;
 
-    private OVRInput.Controller controller;
-
-    void Start()
-    {
-        controller = OVRInput.Controller.RTouch;
-    }
-
     void Update()
     {
         Debug.DrawRay(transform.position, transform.forward * interaction_length, Color.green, 0.3f);
@@ -35,7 +28,6 @@ public class obj_Interaction : MonoBehaviour
     }
     void Onclick()
     {
-        
-        Destroy(gameobject);
+        Destroy(gameObject);
     }
 }
