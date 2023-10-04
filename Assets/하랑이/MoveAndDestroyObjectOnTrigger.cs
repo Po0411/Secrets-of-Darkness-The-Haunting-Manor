@@ -9,12 +9,24 @@ public class MoveAndDestroyObjectOnTrigger : MonoBehaviour
     public float destroyDelay = 3.0f; // 물체 파괴 딜레이 시간
     private bool isPlayerInside = false; // 플레이어가 트리거 안에 있는지 여부
 
+
+    public AudioSource audioSource;
+
+    private void Start()
+    {
+        // 오디오 소스 설정 및 초기화 등의 코드
+        audioSource = GetComponent<AudioSource>();
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) // 플레이어 태그를 사용하여 충돌한 게임 오브젝트가 플레이어인지 확인
         {
             isPlayerInside = true;
             StartCoroutine(MoveAndDestroy());
+
+            PlayAudio();
         }
     }
 
@@ -36,5 +48,12 @@ public class MoveAndDestroyObjectOnTrigger : MonoBehaviour
             Destroy(objectToMove.gameObject);
             
         }
+    }
+
+
+    void PlayAudio()
+    {
+        // 오디오를 재생하려면 오디오 소스의 Play 메서드를 호출합니다.
+        audioSource.Play();
     }
 }

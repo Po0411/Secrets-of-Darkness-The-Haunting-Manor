@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5.0f; // 이동 속도
 
+
+
     private void Update()
     {
         // 키보드 입력을 감지하여 이동 방향을 계산합니다.
@@ -19,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // 이동 벡터를 월드 좌표로 변환하여 이동합니다.
             transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
+
         }
     }
 }
