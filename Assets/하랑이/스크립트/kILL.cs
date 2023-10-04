@@ -43,7 +43,6 @@ public class kILL : MonoBehaviour
             Destroy(objectToDelete);
             Destroy(objectToDelete1);
 
-            // 다른 동작을 수행하거나 추가적인 로직을 추가할 수 있습니다.
 
         }
 

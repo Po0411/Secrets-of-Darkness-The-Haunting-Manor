@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class ObjectMover : MonoBehaviour
 {
+    public Transform targetTransform; // 이동할 대상 오브젝트의 Transform 컴포넌트를 Inspector에서 설정할 수 있도록 public 변수를 사용합니다.
+    public float speed = 5.0f; // 이동 속도를 조절할 수 있는 변수입니다.
+
+    private Vector3 startPosition; // 이동 시작 위치를 저장할 변수입니다.
+    private Vector3 targetPosition; // 이동 목표 위치를 저장할 변수입니다.
+    private bool isMoving = false; // 현재 이동 중인지 여부를 나타내는 변수입니다.
+
 
     private void Start()
     {
@@ -24,8 +31,8 @@ public class ObjectMover : MonoBehaviour
 
             if (journeyFraction >= 1.0f)
             {
-                // 이동이 완료되면 이동 중지
                 isMoving = false;
+                // 여기에서 필요한 코드를 실행합니다.
             }
 
             yield return null;
@@ -37,12 +44,6 @@ public class ObjectMover : MonoBehaviour
     public GameObject objectToDelete1;
 
 
-    public Transform targetTransform; // 이동할 대상 오브젝트의 Transform 컴포넌트를 Inspector에서 설정할 수 있도록 public 변수를 사용합니다.
-    public float speed = 5.0f; // 이동 속도를 조절할 수 있는 변수입니다.
-
-    private Vector3 startPosition; // 이동 시작 위치를 저장할 변수입니다.
-    private Vector3 targetPosition; // 이동 목표 위치를 저장할 변수입니다.
-    private bool isMoving = false; // 현재 이동 중인지 여부를 나타내는 변수입니다.
 
     private void OnTriggerEnter(Collider other)
     {
