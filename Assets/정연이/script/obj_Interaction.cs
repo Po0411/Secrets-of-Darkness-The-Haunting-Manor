@@ -26,8 +26,4 @@ public class obj_Interaction : MonoBehaviour
             }
         }
     }
-    void Onclick()
-    {
-        Destroy(gameObject);
-    }
 }
