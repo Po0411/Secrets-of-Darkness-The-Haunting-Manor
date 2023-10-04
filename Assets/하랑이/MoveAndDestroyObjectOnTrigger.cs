@@ -10,7 +10,7 @@ public class MoveAndDestroyObjectOnTrigger : MonoBehaviour
     private bool isPlayerInside = false; // 플레이어가 트리거 안에 있는지 여부
 
 
-    public AudioSource audioSource;
+    AudioSource audioSource;
 
     private void Start()
     {
