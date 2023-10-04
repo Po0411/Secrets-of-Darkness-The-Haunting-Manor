@@ -9,6 +9,10 @@ public class kILL : MonoBehaviour
     public GameObject objectToDelete1;
 
 
+
+    public GameObject objectToActivate;
+
+
     int a = 0;
 
 
@@ -30,6 +34,8 @@ public class kILL : MonoBehaviour
     // 플레이어가 트리거에 진입했을 때 호출되는 콜백 함수
     private void OnTriggerEnter(Collider other)
     {
+
+        objectToActivate.SetActive(true);
         // 진입한 오브젝트가 플레이어인지 확인합니다.
         if (other.CompareTag("Player"))
         {
