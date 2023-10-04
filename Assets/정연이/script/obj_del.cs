@@ -8,5 +8,6 @@ public class obj_del : MonoBehaviour
     public void Onclick()
     {
         Destroy(Destroy_obj);
+        GameManager.GM.Key_Item_Acquisition();
     }
 }

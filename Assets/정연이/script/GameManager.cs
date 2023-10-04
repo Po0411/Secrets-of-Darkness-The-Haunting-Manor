@@ -10,6 +10,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject gameclear_screen;
     [SerializeField]
+    private GameObject early_obstacles;
+    [SerializeField]
+    private GameObject ghost_1;
+    [SerializeField]
+    private GameObject ghost_2;
+    [SerializeField]
     private TextMeshProUGUI Timer_text;
     [SerializeField]
     private TextMeshProUGUI key_count_text;
@@ -83,16 +89,17 @@ public class GameManager : MonoBehaviour
         {
             case 1:
                 {
-                    //±ÕΩ≈ ±Ù∫˝
-                }break;
+                    Destroy(early_obstacles);
+                }
+                break;
             case 2:
                 {
-                    //º’ µÓ¿Â
+                    ghost_1.SetActive(true);
                 }
                 break;
             case 4:
                 {
-                    //±ÕΩ≈,º’ µÓ¿Â
+                    ghost_2.SetActive(true);
                 }
                 break;
             case 5:
