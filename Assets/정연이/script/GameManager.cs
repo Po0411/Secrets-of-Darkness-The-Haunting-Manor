@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
     {
         key_item_count += 1;
     }
-    void GameClear()
+    public void GameClear()
     {
         gameclear_screen.SetActive(true);
     }

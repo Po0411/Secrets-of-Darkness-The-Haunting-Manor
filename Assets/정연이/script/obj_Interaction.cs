@@ -25,29 +25,17 @@ public class obj_Interaction : MonoBehaviour
             if (hit.transform.tag == "item")
             {
                 interract_text.SetActive(true);
-                if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
-                {
-                    if(hit.transform.GetComponent<item_st>().this_KeyItem)
-                        player_st.player_St.Key_Item_Acquisition();
-                    else
-                    {
-                        switch(hit.transform.GetComponent<item_st>().item_index)
-                        {
-                            case 0:
-                                {
-                                    Debug.Log("test_item");
-                                    interract_text.SetActive(false);
-                                    Destroy(hit.transform.gameObject);
-                                }
-                                break;
-                        }
-                    }
-                }
+
             }
             else if(hit.transform==null|| hit.transform.tag != "item")
             {
                 interract_text.SetActive(false);
             }
         }
+    }
+    void Onclick()
+    {
+        
+        Destroy(gameobject);
     }
 }
