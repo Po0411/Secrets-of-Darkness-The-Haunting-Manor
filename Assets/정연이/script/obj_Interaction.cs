@@ -7,7 +7,6 @@ public class obj_Interaction : MonoBehaviour
 {
     RaycastHit hit;
     float interaction_length = 1.5f;
-    public GameObject interract_text;
     Animator animator;
 
     void Update()
@@ -17,12 +16,12 @@ public class obj_Interaction : MonoBehaviour
         {
             if (hit.transform.tag == "item")
             {
-                interract_text.SetActive(true);
+                hit.transform.GetComponent<item_st>().interract_text.SetActive(true);
 
             }
             else if(hit.transform==null|| hit.transform.tag != "item")
             {
-                interract_text.SetActive(false);
+                hit.transform.GetComponent<item_st>().interract_text.SetActive(false);
             }
         }
     }
