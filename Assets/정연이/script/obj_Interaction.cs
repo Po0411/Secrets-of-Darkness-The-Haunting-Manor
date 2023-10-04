@@ -12,22 +12,20 @@ public class obj_Interaction : MonoBehaviour
 
     private OVRInput.Controller controller;
 
-    private void Start()
+    void Start()
     {
         controller = OVRInput.Controller.RTouch;
     }
-
 
     void Update()
     {
         Debug.DrawRay(transform.position, transform.forward * interaction_length, Color.green, 0.3f);
         if (Physics.Raycast(transform.position, transform.forward, out hit, interaction_length))
         {
-            Debug.Log(hit);
             if (hit.transform.tag == "item")
             {
                 interract_text.SetActive(true);
-                if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, controller))
+                if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
                 {
                     if(hit.transform.GetComponent<item_st>().this_KeyItem)
                         player_st.player_St.Key_Item_Acquisition();
