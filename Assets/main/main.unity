@@ -6651,14 +6651,14 @@ RectTransform:
   m_GameObject: {fileID: 305759726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2607236, y: 1.2607236, z: 1.2607236}
   m_Children: []
   m_Father: {fileID: 922201887}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -204}
   m_SizeDelta: {x: 500, y: 50.000015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &305759728
@@ -6691,8 +6691,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -17114,7 +17114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &922201887
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25059,6 +25059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1276342007}
   - component: {fileID: 1276342008}
+  - component: {fileID: 1276342009}
   m_Layer: 0
   m_Name: Spotlight (3)
   m_TagString: Untagged
@@ -25142,6 +25143,25 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!95 &1276342009
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276342006}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad4756870287b7c4e9957a768b206627, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1280274837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35262,7 +35282,7 @@ PrefabInstance:
     - target: {fileID: 2435521374991276571, guid: 6dc08fdec9370c2409db5e716bce264c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1842351
+      value: -1.391
       objectReference: {fileID: 0}
     - target: {fileID: 2435521374991276571, guid: 6dc08fdec9370c2409db5e716bce264c,
         type: 3}
@@ -35272,7 +35292,7 @@ PrefabInstance:
     - target: {fileID: 2435521374991276571, guid: 6dc08fdec9370c2409db5e716bce264c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.139393
+      value: -11.961
       objectReference: {fileID: 0}
     - target: {fileID: 2435521374991276571, guid: 6dc08fdec9370c2409db5e716bce264c,
         type: 3}
