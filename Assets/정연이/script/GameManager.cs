@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject finall_obj;
     [SerializeField]
-    private GameObject count_text;
+    private GameObject main_ui;
     [SerializeField]
     private GameObject ghost_1;
     [SerializeField]
@@ -85,9 +85,8 @@ public class GameManager : MonoBehaviour
 
     void final()
     {
-        re_Time(30f);
-
-        count_text.SetActive(false);
+        re_Time(20f);
+        main_ui.SetActive(false);
         finall_ui.SetActive(true);
         finall_obj.SetActive(true);
 
