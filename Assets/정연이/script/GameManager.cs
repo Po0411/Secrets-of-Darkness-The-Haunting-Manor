@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
         else
         {
             min = (int)re_time_index / 60;
-            sec = re_time_index - min;
+            sec = re_time_index - (60*min);
         }
     }
 
