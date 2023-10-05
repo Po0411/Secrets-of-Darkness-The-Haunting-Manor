@@ -7,6 +7,7 @@ public class kILL : MonoBehaviour
     // 삭제할 오브젝트를 Unity Inspector에서 설정할 수 있도록 public 변수로 만듭니다.
     public GameObject objectToDelete;
     public GameObject objectToDelete1;
+    public GameObject objectToDelete2;
 
 
 
@@ -42,7 +43,7 @@ public class kILL : MonoBehaviour
             // 플레이어가 트리거에 진입하면 objectToDelete 오브젝트를 삭제합니다.
             Destroy(objectToDelete);
             Destroy(objectToDelete1);
-
+            Destroy(objectToDelete2);
 
         }
 
