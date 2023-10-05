@@ -11,8 +11,13 @@ public class ObjectMover : MonoBehaviour
     private Vector3 startPosition; // 이동 시작 위치
     private Vector3 targetPosition; // 이동 목표 위치
 
+    AudioSource audioSource;
+    int a = 0;
+
+
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         startPosition = objectToMove.position; // 시작 위치 설정
         targetPosition = new Vector3(-22.0f, objectToMove.position.y, objectToMove.position.z); // 목표 위치 설정
     }
@@ -25,6 +30,21 @@ public class ObjectMover : MonoBehaviour
             StartCoroutine(MoveAndDestroy());
             Debug.Log("확인");
         }
+
+        if (other.CompareTag("Player")) // 플레이어 태그를 사용하여 충돌한 게임 오브젝트가 플레이어인지 확인
+        {
+            if (a == 0)
+            {
+                PlayAudio();
+                a++;
+            }
+        }
+    }
+
+    void PlayAudio()
+    {
+        // 오디오를 재생하려면 오디오 소스의 Play 메서드를 호출합니다.
+        audioSource.Play();
     }
 
     private IEnumerator MoveAndDestroy()
