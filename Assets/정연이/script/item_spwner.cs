@@ -24,7 +24,7 @@ public class item_spwner : MonoBehaviour
             if (spwn_count == spwn_item_index)
                 break;
 
-            randomindex = Random.Range(1, 10);
+            randomindex = Random.Range(1, spwn_obj.Length);
             for (int L = 0; L <= trash_count.Length - 1; L++)
             {
                 if (trash_count[L] == randomindex)
@@ -40,7 +40,7 @@ public class item_spwner : MonoBehaviour
             }
             trash_count[spwn_count] = randomindex;
             spwn_count++;
-            spwn_obj[randomindex-1].SetActive(true);
+            spwn_obj[randomindex].SetActive(true);
         }
     }
 }
