@@ -40,7 +40,7 @@ public class item_spwner : MonoBehaviour
             }
             trash_count[spwn_count] = randomindex;
             spwn_count++;
-            spwn_obj[randomindex].SetActive(true);
+            spwn_obj[randomindex-1].SetActive(true);
         }
     }
 }

@@ -12,6 +12,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject early_obstacles;
     [SerializeField]
+    private GameObject finall_ui;
+    [SerializeField]
+    private GameObject finall_obj;
+    [SerializeField]
+    private GameObject count_text;
+    [SerializeField]
     private GameObject ghost_1;
     [SerializeField]
     private GameObject ghost_2;
@@ -33,7 +39,6 @@ public class GameManager : MonoBehaviour
         if (GM == null)
         {
             GM = this;
-            DontDestroyOnLoad(this.gameObject);
         }
         else
         {
@@ -43,8 +48,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        min = (int)max_Time / 60;
-        sec = 00;
+        re_Time(max_Time);
     }
 
     private void Update()
@@ -72,17 +76,37 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-
         gameover_screen.SetActive(true);
     }
     public void Key_Item_Acquisition()
     {
         key_item_count += 1;
     }
-    public void GameClear()
+
+    void final()
     {
-        gameclear_screen.SetActive(true);
+        re_Time(30f);
+
+        count_text.SetActive(false);
+        finall_ui.SetActive(true);
+        finall_obj.SetActive(true);
+
     }
+
+    void re_Time(float re_time_index)
+    {
+        if (re_time_index < 60)
+        {
+            min = 0;
+            sec = re_time_index;
+        }
+        else
+        {
+            min = (int)re_time_index / 60;
+            sec = re_time_index - min;
+        }
+    }
+
     void itemchker()
     {
         switch (key_item_count)
@@ -104,7 +128,7 @@ public class GameManager : MonoBehaviour
                 break;
             case 5:
                 {
-                    GameClear();
+                    final();
                 }
                 break;
         }
