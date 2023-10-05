@@ -19,10 +19,6 @@ public class obj_Interaction : MonoBehaviour
                 hit.transform.GetComponent<item_st>().interract_text.SetActive(true);
 
             }
-            else if(hit.transform==null|| hit.transform.tag != "item")
-            {
-                hit.transform.GetComponent<item_st>().interract_text.SetActive(false);
-            }
         }
     }
 }

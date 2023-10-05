@@ -171,7 +171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1437767047706051777
 RectTransform:
   m_ObjectHideFlags: 0
@@ -299,7 +299,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Destroy_obj: {fileID: 8185391242203606524}
-  Destroy_obj2: {fileID: 3297833687426731908}
 --- !u!1 &6659758314789931134
 GameObject:
   m_ObjectHideFlags: 0
