@@ -19,7 +19,9 @@ public class totorial_text : MonoBehaviour
             case 0:{
                     tr_button.SetActive(true);   
                     }break;
-            case 1: item_traing.SetActive(true); break;
+            case 1: { item_traing.SetActive(true);
+                    tr_button.SetActive(false);
+                } break;
             case 3: { 
                     fide_out.SetActive(true);
                     StartCoroutine(scene_move());
